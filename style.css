@@ -1,25 +1,54 @@
 body{
+	background-color: #fcfcfc;
+	color: #111;
 	font-family: mgopen_modernaregular, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 h1{
+	background-image: url( img/rampp.png );
+	background-position: center 20px;
+	background-repeat: no-repeat;
+	background-size: 15%;
+	font-size: 3em;
+	margin: 0 0 .2em 0;
+	padding-top: 260px;
 	text-align: center;
 }
 
 h2{
+	color: #bbb;
+	font-size: .6em;
+	font-weight: 100;
+	margin: 0 0 9em 0;
 	text-align: center;
 }
 
 h3{
+	font-size: 1.4em;
+	margin: 0 0 2em 0;
 	text-align: center;
 }
 
-p#links{
+ul#links{
+	font-size: .6em;
+	padding: 0;
 	text-align: center;
 }
 
-p#links a{
+ul#links li{
+	display: inline;
+	list-style-type: none;
+}
 
+ul#links a{
+	background-color: #999;
+	border-radius: .4em;
+	color: #fcfcfc;
+	display: inline-block;
+	line-height: 1.4em;
+	margin: .4em;
+	padding: 0 .6em;
+	text-decoration: none;
 }
 
 @font-face {

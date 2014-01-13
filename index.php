@@ -13,8 +13,9 @@
 		<h2>limited liabilty company</h2>
 		<h3>shreveport, la</h3>
 		
-		<p id="links">
-			<a href="https://github.com/pinecone-dot-io">github</a>
-		</p>
+		<ul id="links">
+			<li><a href="">hello</a></li>
+			<li><a href="https://github.com/pinecone-dot-io">github</a></li>
+		</ul>
 	</body>
 </html>
