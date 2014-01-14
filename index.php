@@ -14,8 +14,8 @@
 		<h3>shreveport, la</h3>
 		
 		<ul id="links">
-			<li><a href="">hello</a></li>
 			<li><a href="https://github.com/pinecone-dot-io">github</a></li>
+			<li><a href="mailto:hi@pinecone.io">hello</a></li>
 		</ul>
 	</body>
 </html>
