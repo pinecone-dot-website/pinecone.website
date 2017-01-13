@@ -1,4 +1,0 @@
-pinecone.io
-===========
-
-homepage
