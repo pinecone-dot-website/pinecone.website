@@ -21,13 +21,22 @@ app.get( '/hires', function(req, res){
 	res.render('hires');
 } );
 
-// all
-app.get( '*', function(req, res){
+// 
+app.get('/projects', function (req, res) {
+	res.render('projects');
+});
+
+// index
+app.get('/', function (req, res) {
 	res.render('index');
-} );
+});
 
-var port = Number( process.env.PORT || 5000 );
+app.get('*', function (req, res) {
+	res.status(404).render('notfound');
+});
 
-app.listen( port, function(){
-	console.log( "Listening on port " + port );
-} );
+const port = Number(process.env.PORT || 5000);
+
+app.listen(port, function () {
+	console.log("Listening on port " + port);
+});
