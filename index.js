@@ -4,7 +4,6 @@ var express = require( 'express' ),
 
 	app = express();
 
-app.use( express.static('public') );
 
 app.engine( 'handlebars', exphbs({
 	defaultLayout: 'main',
@@ -14,12 +13,15 @@ app.engine( 'handlebars', exphbs({
 		}
 	}
 }) );
-app.set( 'view engine', 'handlebars' );
 
 // fun
 app.get( '/hires', function(req, res){
 	res.render('hires');
 } );
+app.set('view engine', 'handlebars');
+app.set('views', './views');
+
+app.use(express.static('public'));
 
 // 
 app.get('/projects', function (req, res) {
