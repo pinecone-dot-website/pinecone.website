@@ -1,24 +1,22 @@
-var express = require( 'express' ),
-	exphbs = require( 'express-handlebars' ),
-	//logfmt = require( 'logfmt' ),
-
+const express = require('express'),
+	express_hb = require('express-handlebars'),
 	app = express();
 
-
-app.engine( 'handlebars', exphbs({
-	defaultLayout: 'main',
-	helpers: {
-		json: function( context ){
-			return JSON.stringify( context );
-		}
-	}
-}) );
 
 // fun
 app.get( '/hires', function(req, res){
 	res.render('hires');
 } );
-app.set('view engine', 'handlebars');
+app.engine('hbs', express_hb.engine({
+	extname: ".hbs",
+	// helpers: {
+	// 	json: function (context) {
+	// 		return JSON.stringify(context);
+	// 	}
+	// },
+	layoutsDir: __dirname + '/views/layouts',
+}));
+app.set('view engine', 'hbs');
 app.set('views', './views');
 
 app.use(express.static('public'));
