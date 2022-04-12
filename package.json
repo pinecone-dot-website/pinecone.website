@@ -4,17 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "bower install && gulp default"
+    "sass:dev": "sass --watch --update --style=expanded assets/scss:assets/css",
+    "server:dev": "nodemon index.js"
   },
   "author": "Eric Eaglstun",
   "dependencies": {
-    "gulp": "^3.9.1",
-    "gulp-bower": ">=0.0.13",
-    "gulp-sass": "^3.0.0"
     "body-parser": "^1.20.0",
     "express": "^4.17.3",
     "express-handlebars": "^6.0.5",
+    "sass": "^1.50.0"
   },
   "license": "ISC"
 }

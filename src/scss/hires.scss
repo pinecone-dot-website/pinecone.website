@@ -1,0 +1,14 @@
+body {
+    animation: animated 1s linear infinite;
+  background-image: url(img/hires.png);
+  background-size: 5px 5px;
+}
+
+@keyframes animated {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 15px 0;
+  }
+}
