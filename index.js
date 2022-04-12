@@ -2,18 +2,19 @@ const express = require('express'),
 	express_hb = require('express-handlebars'),
 	app = express();
 
-
-// fun
-app.get( '/hires', function(req, res){
-	res.render('hires');
-} );
 app.engine('hbs', express_hb.engine({
 	extname: ".hbs",
-	// helpers: {
-	// 	json: function (context) {
-	// 		return JSON.stringify(context);
-	// 	}
-	// },
+	helpers: {
+		// 	json: function (context) {
+		// 		return JSON.stringify(context);
+		// 	}
+		section(name, options) {
+			if (!this._sections)
+				this._sections = {};
+			this._sections[name] = options.fn(this);
+			return null;
+		},
+	},
 	layoutsDir: __dirname + '/views/layouts',
 }));
 app.set('view engine', 'hbs');
@@ -24,6 +25,11 @@ app.use(express.static('public'));
 // 
 app.get('/projects', function (req, res) {
 	res.render('projects');
+});
+
+// hi dpi screens
+app.get('/hires', function (req, res) {
+	res.render('hires');
 });
 
 // index

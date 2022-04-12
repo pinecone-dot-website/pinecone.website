@@ -1,7 +1,13 @@
+@import 'includes/shared';
+
 body {
-    animation: animated 1s linear infinite;
-  background-image: url(img/hires.png);
+  animation: animated 1s linear infinite;
+  background-image: url(/img/hires.png);
   background-size: 5px 5px;
+}
+
+main{
+  text-align: center;
 }
 
 @keyframes animated {
